@@ -7,7 +7,7 @@ int myint, myint2;
 
 Servo myservo1;
 Servo myservo2;
-
+Servo myservo3;
 void setup()
 {
   Serial.begin(115200);
@@ -16,6 +16,7 @@ void setup()
 
   myservo1.attach(6, 900, 2100);
   myservo2.attach(7, 900, 2100);
+  myservo3.attach(3, 900, 2100);
 }
 
 void loop()
@@ -24,7 +25,7 @@ void loop()
   myservo1.writeMicroseconds(1500);
   myservo2.writeMicroseconds(1000);
 */  
-
+  myservo3.writeMicroseconds(1500);
   if (Serial.available() >= 4) {
     Byte1 = Serial.read();
     Byte2 = Serial.read();
