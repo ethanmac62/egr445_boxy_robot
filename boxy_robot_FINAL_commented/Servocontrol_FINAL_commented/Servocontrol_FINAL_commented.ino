@@ -66,7 +66,7 @@ void loop()
     if (myint2 >= 1000 && myint2 <= 2000){
       myservo2.writeMicroseconds(myint2);
     }
-    delay(300);
+    delay(10);
 
     // second set
      if (myint3 >= 1000 && myint3 <= 2000){
@@ -75,8 +75,8 @@ void loop()
     if (myint4 >= 1000 && myint4 <= 2000){
       myservo2.writeMicroseconds(myint4);
     }
-    delay(300);
-    Serial.println("Ready");
+    delay(1000); //The second point is the important point, the first servo movement is to an intermediate point
+    Serial.println("Ready"); //Signifies to python that it is ready for python to continue iterating through the for loop
     Serial.print('\n');
   }
 }
